@@ -1,0 +1,46 @@
+backend:
+  name: turbo-github
+  turbo_site_id: REPLACE_WITH_TURBO_SITE_ID
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: news
+    label: Новости
+    folder: content/news
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - { label: Дата, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: Категория, name: tag, widget: string, default: STUDIO }
+      - { label: Краткий текст, name: body, widget: text }
+  - name: projects
+    label: Проекты
+    folder: content/projects
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Название, name: title, widget: string }
+      - { label: Статус, name: status, widget: string }
+      - { label: CSS-оформление карточки, name: art, widget: select, options: [neuro-art, paul-art] }
+      - { label: Описание, name: body, widget: text }
+  - name: team
+    label: Команда
+    folder: content/team
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Имя, name: name, widget: string }
+      - { label: Роль, name: role, widget: string }
+      - { label: Порядок, name: order, widget: number }
