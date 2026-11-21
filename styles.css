@@ -112,6 +112,14 @@ h1 { margin: 0; font-family: 'Press Start 2P', monospace; font-size: clamp(30px,
 .finale-code { color: #666; font-size: 9px; letter-spacing: .24em; margin-bottom: 28px; }
 .finale h2 { margin: 0; font-family: 'Press Start 2P'; font-size: clamp(34px, 7vw, 76px); letter-spacing: -.05em; }
 .finale p { margin: 25px 0 0; color: #a1a1a1; font-size: 12px; }
+.visitor-stats { padding: 24px 0 18px; border-top: 1px solid var(--line-soft); }
+.stats-heading { font-size: 9px; letter-spacing: .22em; color: #666; margin-bottom: 16px; }
+.stats-grid { display: flex; gap: 0; flex-wrap: wrap; }
+.stat { min-width: 140px; padding: 10px 28px 10px 0; margin-right: 28px; border-right: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 6px; }
+.stat:last-child { border-right: 0; }
+.stat-label { font-size: 8px; letter-spacing: .18em; color: #777; }
+.stat strong { font-size: 22px; font-weight: 500; color: #e8e8e8; letter-spacing: .04em; }
+@media (max-width: 620px) { .stat { min-width: 90px; padding-right: 14px; margin-right: 12px; } .stat strong { font-size: 18px; } }
 .site-footer { border-top: 1px solid var(--line); background: #000; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 22px 0; color: #555; font-size: 8px; letter-spacing: .13em; text-transform: uppercase; }
 .footer-socials { display: flex; flex-wrap: wrap; gap: 10px; }
