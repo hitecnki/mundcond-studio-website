@@ -1,0 +1,5 @@
+[functions]
+node_bundler = "esbuild"
+
+[functions."visitor-stats"]
+node_bundler = "esbuild"
